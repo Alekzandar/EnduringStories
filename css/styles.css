@@ -1,4 +1,13 @@
 
+.center-circle {
+    position: absolute;
+    background: url("../media/circle-scratch.png");
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
 .introPage {
     position: absolute;
 
@@ -25,3 +34,5 @@
     width: 100%;
     padding: 20px;  
 }
+
+
