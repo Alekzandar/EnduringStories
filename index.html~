@@ -1,0 +1,12 @@
+<html>
+
+  
+  <head>
+    <title> Mining Memories </title>
+    <script src="main.js"> </script>
+  </head>
+  
+  <body>
+    <div id="introPage"> </div> 
+  </body>
+</html>

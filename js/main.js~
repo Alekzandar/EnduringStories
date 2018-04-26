@@ -1,0 +1,7 @@
+
+function enterPage(){
+    //alert("clicked");
+   var introP =  document.getElementById("introPage");
+   introP.style.opacity = "0.0";
+
+}

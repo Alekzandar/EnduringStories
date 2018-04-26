@@ -1,0 +1,7 @@
+var intro = true;
+
+
+function enterPage(){
+    document.getElementByID("introPage").style.opacity = "0.0";
+
+}
