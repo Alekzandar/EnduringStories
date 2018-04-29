@@ -38,6 +38,7 @@ function returnHome(){
 much thanks to bootstrap xoxo
 */
 function expandStory(tabID){
+    //The opposite of .hide is .show
     $("h1").hide();
     if (currTab != undefined){
 	$(currTab).removeClass("col-6");

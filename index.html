@@ -3,36 +3,69 @@
   
   <head>
     <title> Mining Memories </title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/main.js"> </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   
   <body>
 
 
     <div id="introPage">
-       <div class="center-circle"> </div>
+      <div class="overlay">
+	<div id="overlay-text">
+	  <p> "This is the intro  page" </p>
+	  <input type="button" class="btn btn-light" value="Enter Here" onclick="changePage()"/>
+	</div>
+      </div>
+
+
 
       <video autoplay muted loop id="churchVideo">
 	<source src="media/church.mp4" type="video/mp4" >
       </video>
 
-      <div class="overlay">
-	<p> "This is the intro  page" </p>
-	<input type="button" value="Enter Here" onclick="changePage()"/>
-      </div>
-
      
 
     </div> 
 
-    <div id="explain" style="opacity:0.0">
-      <input type="button" value="Return Home" onclick="returnHome()"/>
-    </div>
-    
-      
+    <div id="explain" style="display:none">
+      <input type="button" class="btn btn-light" value="Return Home" onclick="returnHome()"/>
 
+      <div class="container">
+	<div class="row">
+	  <div class="col-sm bg-light border" id="tab1" onclick="expandStory('#tab1')" style="height:100%">
+	    <h1> Story 1 </h1>
+	    <div class="expandedText">
+	      This is expanded info about story 1 
+	    </div>
+	  </div>
+
+	  <div class="col-sm bg-light border" id="tab2" onclick="expandStory('#tab2')" style="height:100%">
+	    <h1> Story 2 </h1>
+	    <div class="expandedText">
+	      This is expanded info about story 1 
+	    </div>
+	  </div>
+
+	  <div class="col-sm bg-light border" id="tab3" onclick="expandStory('#tab3')" style="height:100%">
+	    <h1> Story 3 </h1>
+	    <div class="expandedText">
+	      This is expanded info about story 1 
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+
+
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- These are allegedly needed for bootstrap lmk -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   
   </body>
 </html>
