@@ -1,3 +1,25 @@
+.arrow-left{
+    background-image:url("../svg/triangle-left.svg");
+    background-size: contain;
+}
+
+.arrow-right{
+    background-image:url("../svg/triangle-right.svg");
+    background-size: contain;
+}
+
+
+.bouton-image{
+    content: "";
+    height: 50px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+
 
 .overlay{
     position:absolute;

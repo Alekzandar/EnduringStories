@@ -1,53 +1,47 @@
-var pagesArr = ["introPage","explain", "menus","storyboard"]
 var currPage = 0;
 var currTab;
 
 
+/**
+Used to move between different div classes on index.html
+Accepts: dive class name of page to be routed to
 
-function changePage(){
+If on a "memory" page, runs new function that structures the memory page
+**/
+function changePage(currPage, newPage, memNum){
 
-   var pageDisp =  document.getElementById(pagesArr[currPage]);
-  var  pageJQ = "#" + pagesArr[currPage];
-   $(pageJQ).fadeOut("10000");
+   $('#'+currPage).fadeOut("10000");
 
-   currPage++; 
-   pageDisp =  document.getElementById(pagesArr[currPage]);
-   pageDisp.style.opacity = "1.0";
-   pageDisp.style.display = "block"; 
+   $('#'+newPage).css({'display':'block', 'opacity':'1.0'});
    
-}
-
-
-/* This function will be useful for the button at the top of the "slidedown" menu
-*/
-function returnHome(){
-   var pageDisp =  document.getElementById(pagesArr[currPage]);
-   pageDisp.style.opacity = "0.0";
-   pageDisp.style.display = "none"; 
-
-   currPage = 0; 
-   pageDisp =  document.getElementById(pagesArr[currPage]);
-  var  pageJQ = "#" + pagesArr[currPage];
-   $(pageJQ).fadeIn("10000"); 
-   pageDisp.style.opacity = "1.0";
-   pageDisp.style.display = "block"; 
+   if (memNum != undefined){
+       //runMemPage(memNum);
+   }
+   
 }
 
 
 /*This function expands the story tabs by adjusting the flex column size
 much thanks to bootstrap xoxo
+
+Accepts tabID, header ID, and text ID to adjust visibility
 */
-function expandStory(tabID){
+function expandStory(tabID, hID, expID){
+    $('.expandedText').hide();
     $("h1").hide();
     if (currTab != undefined){
 	$(currTab).removeClass("col-6");
 	$(currTab).addClass("col-sm");
+	$(expID).show();
+	$(hID).show();
     }
  
     if( $(tabID).hasClass("col-sm")){
 	$(tabID).removeClass("col-sm");
 	$(tabID).addClass("col-6");
 	currTab = tabID;
+	$(expID).show();
+	$(hID).show();
     }
     else{
 	$(tabID).removeClass("col-6");
@@ -56,4 +50,43 @@ function expandStory(tabID){
 
 
 }
+
+
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        width: 600,
+        height: 400,
+        videoId: '9WbCfHutDSE',
+        playerVars: {
+            color: 'white',
+            playlist: '1ekZEVeXwek,23e702UuOFg'
+        },
+        events: {
+            onReady: initialize
+        }
+    });
+}
+
+
+function initialize(){
+
+    // Update the controls on load
+    updateTimerDisplay();
+    updateProgressBar();
+
+    // Clear any old interval.
+    clearInterval(time_update_interval);
+
+    // Start interval to update elapsed time display and
+    // the elapsed part of the progress bar every second.
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+        updateProgressBar();
+    }, 1000)
+
+}
+
 
