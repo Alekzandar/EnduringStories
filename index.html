@@ -28,10 +28,11 @@
     <div id="explain" style="display:none">
 
       <div class="container-fluid">
-	<div class="row">
+	<div class="row no-gutters">
 	  <div class="col-sm bg-light border" id="tab1" onclick="expandStory('#tab1', '#h11', '#exp1')" style="height:100%">
-	    <h1 id="h11" > Story 1 </h1>
+	    <h1 id="h11" > Then </h1>
 	    <div class="expandedText"  style="display:none" id="exp1">
+	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab1', '#h11', '#exp1')">  </button>
 	      This is expanded info about story 1 
 	      <br>
 	      <button type="button" class="btn btn-outline-dark" id="btn1" onclick="changePage('explain','memPage', 1)"> 
@@ -41,7 +42,7 @@
 	  </div>
 
 	  <div class="col-sm bg-light border" id="tab2" onclick="expandStory('#tab2', '#h12', '#exp2')" style="height:100%">
-	    <h1 id="h12"> Story 2 </h1>
+	    <h1 id="h12"> Coal </h1>
 	    <div class="expandedText" style="display:none" id="exp2">
 	      This is expanded info about story 2 
 	      <br>
@@ -52,7 +53,7 @@
 	  </div>
 
 	  <div class="col-sm bg-light border" id="tab3" onclick="expandStory('#tab3', '#h13', '#exp3')" style="height:100%">
-	    <h1 id="h13"> Story 3 </h1>
+	    <h1 id="h13"> Church </h1>
 	    <div class="expandedText" style="display:none" id="exp3">
 	      This is expanded info about story 3 
 	      <br>
@@ -63,7 +64,7 @@
 	  </div>
 
 	  <div class="col-sm bg-light border" id="tab4" onclick="expandStory('#tab4', '#h14', '#exp4')" style="height:100%">
-	    <h1 id="h14"> Story 4 </h1>
+	    <h1 id="h14"> Now </h1>
 	    <div class="expandedText" style="display:none" id="exp4">
 	      This is expanded info about story 4 
 	      <br>
@@ -80,7 +81,7 @@
     <div id="memPage" style="display:none">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#">Mining Memories</a>
+	<a class="navbar-brand" onclick="changePage('memPage','introPage')">Mining Memories</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
@@ -114,17 +115,17 @@
 	    Add Thumbnails of next videos here
 	  </div>
 	  <div class="col-sm center-block text-center" style="height:100%">
-	     <button type="button" class="btn bouton-image arrow-left"> </button>
+	     <button type="button" class="btn bouton-image arrow-left" onclick="prevVideo()"> </button>
 	    
 	   </div>
 	  <div class="col-sm center-block text-center" style="height:100%">
 	    <div id="video-placeholder"></div>
 	  </div>
 	  <div class="col-sm center-block text-center" style="height:100%">
-	    <button type="button" class="btn bouton-image arrow-right"> </button>
+	    <button type="button" class="btn bouton-image arrow-right"  onclick="nextVideo()"> </button>
 	  </div>
 	  <div class="col-sm center-block text-center" style="height:100%">
-	    Add thumbnails of net videos here
+	    Add thumbnails of next videos here
 	  </div>
 	</div>
       </div>

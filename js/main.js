@@ -1,5 +1,5 @@
 var currPage = 0;
-var currTab;
+var currTab=0;
 
 
 /**
@@ -27,19 +27,21 @@ much thanks to bootstrap xoxo
 Accepts tabID, header ID, and text ID to adjust visibility
 */
 function expandStory(tabID, hID, expID){
-    $('.expandedText').hide();
-    $("h1").hide();
-    if (currTab != undefined){
-	$(currTab).removeClass("col-6");
-	$(currTab).addClass("col-sm");
-	$(expID).show();
-	$(hID).show();
+    if (currTab != 0){
+	return;
+	//$(currTab).removeClass("col-6");
+	//$(currTab).addClass("col-sm");
+	//$(expID).show();
+	//$(hID).show();
     }
+
+   $('.expandedText').hide();
+   $("h1").hide();
  
     if( $(tabID).hasClass("col-sm")){
 	$(tabID).removeClass("col-sm");
 	$(tabID).addClass("col-6");
-	currTab = tabID;
+	currTab = 1;
 	$(expID).show();
 	$(hID).show();
     }
@@ -47,7 +49,14 @@ function expandStory(tabID, hID, expID){
 	$(tabID).removeClass("col-6");
 	$(tabID).addClass("col-sm");
     }
+}
 
+function deExpandStory(tabID, hID, expID){
+    $('.expandedText').hide();
+    $("h1").show();
+    $(tabID).removeClass("col-6");
+    $(tabID).addClass("col-sm");
+    currTab = 0;
 
 }
 
@@ -89,4 +98,12 @@ function initialize(){
 
 }
 
+function nextVideo(){
+    player.nextVideo();
 
+}
+
+function prevVideo(){
+    player.previousVideo();
+
+}

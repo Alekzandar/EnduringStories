@@ -9,6 +9,17 @@
 }
 
 
+.crossX{
+    content: "";
+    height: 30px;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+    background-image:url("../svg/x.svg");
+    background-size: contain;
+}
+
+
 .bouton-image{
     content: "";
     height: 50px;
@@ -20,6 +31,21 @@
     background-repeat:no-repeat;
 }
 
+#tab1{
+    background-image: url("../media/Then_Street_View.jpg");
+}
+
+#tab2{
+    background-image: url("../media/miners.jpg");
+}
+
+#tab3{
+    background-image: url("../media/big_organ.jpg");
+}
+
+#tab4{
+    background-image: url("../media/sewing_factory.jpg");
+}
 
 .overlay{
     position:absolute;
@@ -30,6 +56,17 @@
     height: 100%;
     background:url("../media/circle-scratch.png") no-repeat 50% 50%;
     
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 #overlay-text{
