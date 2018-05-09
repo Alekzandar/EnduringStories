@@ -1,5 +1,5 @@
 var currPage = 0;
-var currTab=0;
+var currTab="";
 
 
 /**
@@ -27,28 +27,24 @@ much thanks to bootstrap xoxo
 Accepts tabID, header ID, and text ID to adjust visibility
 */
 function expandStory(tabID, hID, expID){
-    if (currTab != 0){
+
+    //This is a really dumb work around but basically when I would change
+    //currTab to "" in deExpandStory(), it would then run through
+    //expandStory again, as clicking on the crossX button is technically 
+    //Also clicking on the entire column
+    if ((currTab != "") || (currTab == "jc")){
+	currTab = "";
 	return;
-	//$(currTab).removeClass("col-6");
-	//$(currTab).addClass("col-sm");
-	//$(expID).show();
-	//$(hID).show();
     }
 
    $('.expandedText').hide();
    $("h1").hide();
  
-    if( $(tabID).hasClass("col-sm")){
-	$(tabID).removeClass("col-sm");
-	$(tabID).addClass("col-6");
-	currTab = 1;
-	$(expID).show();
-	$(hID).show();
-    }
-    else{
-	$(tabID).removeClass("col-6");
-	$(tabID).addClass("col-sm");
-    }
+    $(tabID).removeClass("col-sm");
+    $(tabID).addClass("col-6");
+    currTab = tabID;
+    $(expID).show();
+    $(hID).show();
 }
 
 function deExpandStory(tabID, hID, expID){
@@ -56,7 +52,8 @@ function deExpandStory(tabID, hID, expID){
     $("h1").show();
     $(tabID).removeClass("col-6");
     $(tabID).addClass("col-sm");
-    currTab = 0;
+    //Stands for "just clicked" not our lord and savior Jesus Christ
+    currTab = "jc";
 
 }
 

@@ -19,9 +19,6 @@
 	</div>
       </div>
 
-      <video autoplay muted loop id="churchVideo">
-	<source src="media/church.mp4" type="video/mp4" >
-      </video>
     </div> 
 
 
@@ -44,6 +41,7 @@
 	  <div class="col-sm bg-light border" id="tab2" onclick="expandStory('#tab2', '#h12', '#exp2')" style="height:100%">
 	    <h1 id="h12"> Coal </h1>
 	    <div class="expandedText" style="display:none" id="exp2">
+	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab2', '#h12', '#exp2')">  </button>
 	      This is expanded info about story 2 
 	      <br>
 	      <button type="button" class="btn btn-outline-dark" id="btn2" onclick="changePage('explain','memPage', 2)"> 
@@ -55,6 +53,7 @@
 	  <div class="col-sm bg-light border" id="tab3" onclick="expandStory('#tab3', '#h13', '#exp3')" style="height:100%">
 	    <h1 id="h13"> Church </h1>
 	    <div class="expandedText" style="display:none" id="exp3">
+	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab3', '#h13', '#exp3')">  </button>
 	      This is expanded info about story 3 
 	      <br>
 	      <button type="button" class="btn btn-outline-dark" id="btn3" onclick="changePage('explain','memPage', 3)"> 
@@ -66,6 +65,7 @@
 	  <div class="col-sm bg-light border" id="tab4" onclick="expandStory('#tab4', '#h14', '#exp4')" style="height:100%">
 	    <h1 id="h14"> Now </h1>
 	    <div class="expandedText" style="display:none" id="exp4">
+	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab4', '#h14', '#exp4')">  </button>
 	      This is expanded info about story 4 
 	      <br>
 	      <button type="button" class="btn btn-outline-dark" id="btn4" onclick="changePage('explain','memPage', 4)"> 
