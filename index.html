@@ -73,6 +73,13 @@
 	      </button>
 	    </div>
 	  </div>
+<button class="btn btn-primary btn" id = "vid_button" data-toggle="modal" data-target="#myModalVideo">
+    Submit Youtube Video
+</button>
+
+<button class="btn btn-primary btn" id = "img_button" data-toggle="modal" data-target="#myModalImage">
+    Submit Image
+</button>
 
 	</div>
       </div>
@@ -133,10 +140,250 @@
     </div>
 
     <div id="aboutUsPage" style="display:none">
-      Just me for right now :) Trying my hardest :)
+ </section>
+
+    <section class="aboutus" id="aboutus">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>About Us</h2>
+          <p class="text-muted">Bucknell University And Shamokin</p>
+          <hr>
+        </div>
+            <div class="container-fluid">
+              <center>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <p class="text-muted" style="text-align:justify;"><b>Stephanie Garboski</b> is a senior at Bucknell University, majoring in both Computer Science and Comparative Humanities. She is currently a Teacher's Assistant for the Comparative Humanities Department, the events planner for the Chi Omega Sorority on campus, and is also working on an Honors Thesis within the Comparative Humanities department. Her interests vary widely, from creative writing to web application security, and she is hoping to eventually retire early from her career in web security to pursue a career in fiction writing from the safety and comfort of her farm in rural New England.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <p class="text-muted" style="text-align:justify;"><b>Aleksandar Antonov</b> is a senior at Bucknell University pursuing a BS in Computer Science. With interests spanning Literature, Social Justice, ‘The Great Outdoors’, graphics, and security engineering.  Aleksandar aims to bring his skills in computer science to interface with paths intersecting with those interests. You’re likely to find Aleksandar whizzing around on his bike, tumbling through the woods, creating lists for whatever whimsy, and deliberating his future with his soon-to-be dog.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </center>
+        </div>
+    </section>
     </div>
 
 
+<!-- ############################################## -->
+<!-- Image Submission Modal -->
+<div class="modal fade" id="myModalImage" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+
+
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Enter Image Data
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form class="form-horizontal" method="post" action="/addimage">
+
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="src">Image Source</label>
+                    <div class="col-sm-10">
+                        <input type="text" class ="form-control"name = "src"  
+                        id="src" placeholder="drive.google.com/..."  required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="alt">Image Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name = "alt"
+                        id="alt" placeholder="Cool Image" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="width" >Width</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name = "width"
+                            id="width" placeholder="width" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="height" >Height</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name = "height"
+                            id="height" placeholder="height" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="vid-tags" >Tags (Comma Separated)</label>
+                    <div class="col-sm-10">
+                        <input type="" class="form-control" name = "tags"
+                            id="vid-tags" placeholder="interview, friar" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="type" >Storage Type</label>
+                    <div class="col-sm-10">
+                        <input type="string" class="form-control" name = "type"
+                            id="type" placeholder = "photo" readonly value="photo" required/>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit Image</button>
+                    </div>
+                </div>
+                </form>
+          </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ############################################## -->
+<!-- Video Submission Modal -->
+
+<div class="modal fade" id="myModalVideo" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+
+
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="vidModalLabel">
+                    Enter Youtube Video Data
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form class="form-horizontal" method="post" action="/addvideo">
+
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="vid-src">Youtube Thumbnail ID</label>
+                    <div class="col-sm-10">
+                        <input type="text" class ="form-control"name = "src"  
+                        id="vid-src" placeholder="drive.google.com/..."  required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="content">Youtube Video ID</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name = "content"
+                        id="content" placeholder="Cool Image" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="vid-width" >Width</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name = "width"
+                            id="vidwidth" placeholder="width" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="vid-height" >Height</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name = "height"
+                            id="vid-height" placeholder="height" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="vid-tags" >Tags (Comma Separated)</label>
+                    <div class="col-sm-10">
+                        <input type="" class="form-control" name = "tags"
+                            id="vid-tags" placeholder="interview, friar" required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="alt" >Storage Type</label>
+                    <div class="col-sm-10">
+                        <input type="string" class="form-control" name = "type"
+                            id="vid-type" placeholder = "video" readonly value="video" required/>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default" >Submit Video</button>
+                    </div>
+                </div>
+                </form>
+          </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+function setVideo() {
+  document.getElementById("vid-type").value = "video";
+}
+
+function setPhoto() {
+  document.getElementById("photo-type").value = "photo";
+}
+
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

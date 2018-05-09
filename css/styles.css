@@ -1,3 +1,9 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+
+.div{
+    position: relative;
+}
+
 .arrow-left{
     background-image:url("../svg/triangle-left.svg");
     background-size: contain;
