@@ -1,9 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
-
-.div{
-    position: relative;
-}
-
 .arrow-left{
     background-image:url("../svg/triangle-left.svg");
     background-size: contain;
@@ -69,7 +63,7 @@
     height: 100%;
     background:url("../media/MiningMemoriesNoBox.png") no-repeat 50% 50%;
     background-size: contain;
-  } 
+  }
 
 #introPage{
 
@@ -99,7 +93,3 @@ width:100%;
     width:100%;
     height:100%;
 }
-
-
-
-

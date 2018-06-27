@@ -1,13 +1,12 @@
 <html>
 
-  
+
   <head>
     <title> Mining Memories </title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="js/main.js"> </script>
   </head>
-  
+
   <body>
 
 
@@ -19,7 +18,7 @@
 	</div>
       </div>
 
-    </div> 
+    </div>
 
 
     <div id="explain" style="display:none">
@@ -30,10 +29,10 @@
 	    <h1 id="h11" > Then </h1>
 	    <div class="expandedText"  style="display:none" id="exp1">
 	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab1', '#h11', '#exp1')">  </button>
-	      This is expanded info about story 1 
+	      This is expanded info about story 1
 	      <br>
-	      <button type="button" class="btn btn-outline-dark" id="btn1" onclick="changePage('explain','memPage', 1)"> 
-		Enter Memories 
+	      <button type="button" class="btn btn-outline-dark" id="btn1" onclick="changePage('explain','memPage', 'then')">
+		Enter Memories
 	      </button>
 	    </div>
 	  </div>
@@ -42,10 +41,10 @@
 	    <h1 id="h12"> Coal </h1>
 	    <div class="expandedText" style="display:none" id="exp2">
 	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab2', '#h12', '#exp2')">  </button>
-	      This is expanded info about story 2 
+	      This is expanded info about story 2
 	      <br>
-	      <button type="button" class="btn btn-outline-dark" id="btn2" onclick="changePage('explain','memPage', 2)"> 
-		Enter Memories 
+	      <button type="button" class="btn btn-outline-dark" id="btn2" onclick="changePage('explain','memPage', 'coal')">
+		Enter Memories
 	      </button>
 	    </div>
 	  </div>
@@ -54,10 +53,10 @@
 	    <h1 id="h13"> Church </h1>
 	    <div class="expandedText" style="display:none" id="exp3">
 	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab3', '#h13', '#exp3')">  </button>
-	      This is expanded info about story 3 
+	      This is expanded info about story 3
 	      <br>
-	      <button type="button" class="btn btn-outline-dark" id="btn3" onclick="changePage('explain','memPage', 3)"> 
-		Enter Memories 
+	      <button type="button" class="btn btn-outline-dark" id="btn3" onclick="changePage('explain','memPage', 'church')">
+		Enter Memories
 	      </button>
 	    </div>
 	  </div>
@@ -66,20 +65,13 @@
 	    <h1 id="h14"> Now </h1>
 	    <div class="expandedText" style="display:none" id="exp4">
 	      <button type="button" class="btn crossX btn-outline-dark" onclick="deExpandStory('#tab4', '#h14', '#exp4')">  </button>
-	      This is expanded info about story 4 
+	      This is expanded info about story 4
 	      <br>
-	      <button type="button" class="btn btn-outline-dark" id="btn4" onclick="changePage('explain','memPage', 4)"> 
-		Enter Memories 
+	      <button type="button" class="btn btn-outline-dark" id="btn4" onclick="changePage('explain','memPage', 'now')">
+		Enter Memories
 	      </button>
 	    </div>
 	  </div>
-<button class="btn btn-primary btn" id = "vid_button" data-toggle="modal" data-target="#myModalVideo">
-    Submit Youtube Video
-</button>
-
-<button class="btn btn-primary btn" id = "img_button" data-toggle="modal" data-target="#myModalImage">
-    Submit Image
-</button>
 
 	</div>
       </div>
@@ -99,7 +91,7 @@
 	    </li>
 	    <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		View Other Narratives 
+		View Other Narratives
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		<a class="dropdown-item" href="#">Nar 1</a>
@@ -117,282 +109,44 @@
 
 
       <div class="container-fluid">
-	<div class="row">
-	  <div class="col-sm center-block text-center" style="height:100%">
-	    Add Thumbnails of next videos here
-	  </div>
-	  <div class="col-sm center-block text-center" style="height:100%">
-	     <button type="button" class="btn bouton-image arrow-left" onclick="prevVideo()"> </button>
-	    
-	   </div>
-	  <div class="col-sm center-block text-center" style="height:100%">
-	    <div id="video-placeholder"></div>
-	  </div>
-	  <div class="col-sm center-block text-center" style="height:100%">
-	    <button type="button" class="btn bouton-image arrow-right"  onclick="nextVideo()"> </button>
-	  </div>
-	  <div class="col-sm center-block text-center" style="height:100%">
-	    Add thumbnails of next videos here
-	  </div>
-	</div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <!-- Fill in w/ JS -->
+          </ol>
+          <div class="carousel-inner">
+            <!-- Fill in w/ JS -->
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
       </div>
 
     </div>
 
     <div id="aboutUsPage" style="display:none">
- </section>
-
-    <section class="aboutus" id="aboutus">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>About Us</h2>
-          <p class="text-muted">Bucknell University And Shamokin</p>
-          <hr>
-        </div>
-            <div class="container-fluid">
-              <center>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <p class="text-muted" style="text-align:justify;"><b>Stephanie Garboski</b> is a senior at Bucknell University, majoring in both Computer Science and Comparative Humanities. She is currently a Teacher's Assistant for the Comparative Humanities Department, the events planner for the Chi Omega Sorority on campus, and is also working on an Honors Thesis within the Comparative Humanities department. Her interests vary widely, from creative writing to web application security, and she is hoping to eventually retire early from her career in web security to pursue a career in fiction writing from the safety and comfort of her farm in rural New England.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <p class="text-muted" style="text-align:justify;"><b>Aleksandar Antonov</b> is a senior at Bucknell University pursuing a BS in Computer Science. With interests spanning Literature, Social Justice, ‘The Great Outdoors’, graphics, and security engineering.  Aleksandar aims to bring his skills in computer science to interface with paths intersecting with those interests. You’re likely to find Aleksandar whizzing around on his bike, tumbling through the woods, creating lists for whatever whimsy, and deliberating his future with his soon-to-be dog.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </center>
-        </div>
-    </section>
+      Just me for right now :) Trying my hardest :)
     </div>
 
 
-<!-- ############################################## -->
-<!-- Image Submission Modal -->
-<div class="modal fade" id="myModalImage" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
 
-
-            <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Enter Image Data
-                </h4>
-            </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                
-                <form class="form-horizontal" method="post" action="/addimage">
-
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="src">Image Source</label>
-                    <div class="col-sm-10">
-                        <input type="text" class ="form-control"name = "src"  
-                        id="src" placeholder="drive.google.com/..."  required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="alt">Image Title</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name = "alt"
-                        id="alt" placeholder="Cool Image" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="width" >Width</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name = "width"
-                            id="width" placeholder="width" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="height" >Height</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name = "height"
-                            id="height" placeholder="height" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="vid-tags" >Tags (Comma Separated)</label>
-                    <div class="col-sm-10">
-                        <input type="" class="form-control" name = "tags"
-                            id="vid-tags" placeholder="interview, friar" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="type" >Storage Type</label>
-                    <div class="col-sm-10">
-                        <input type="string" class="form-control" name = "type"
-                            id="type" placeholder = "photo" readonly value="photo" required/>
-                    </div>
-                  </div>
-
-
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Submit Image</button>
-                    </div>
-                </div>
-                </form>
-          </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" 
-                        data-dismiss="modal">
-                            Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ############################################## -->
-<!-- Video Submission Modal -->
-
-<div class="modal fade" id="myModalVideo" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-
-
-            <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="vidModalLabel">
-                    Enter Youtube Video Data
-                </h4>
-            </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                
-                <form class="form-horizontal" method="post" action="/addvideo">
-
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="vid-src">Youtube Thumbnail ID</label>
-                    <div class="col-sm-10">
-                        <input type="text" class ="form-control"name = "src"  
-                        id="vid-src" placeholder="drive.google.com/..."  required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="content">Youtube Video ID</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name = "content"
-                        id="content" placeholder="Cool Image" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="vid-width" >Width</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name = "width"
-                            id="vidwidth" placeholder="width" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="vid-height" >Height</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name = "height"
-                            id="vid-height" placeholder="height" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="vid-tags" >Tags (Comma Separated)</label>
-                    <div class="col-sm-10">
-                        <input type="" class="form-control" name = "tags"
-                            id="vid-tags" placeholder="interview, friar" required/>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="alt" >Storage Type</label>
-                    <div class="col-sm-10">
-                        <input type="string" class="form-control" name = "type"
-                            id="vid-type" placeholder = "video" readonly value="video" required/>
-                    </div>
-                  </div>
-
-
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default" >Submit Video</button>
-                    </div>
-                </div>
-                </form>
-          </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-
-function setVideo() {
-  document.getElementById("vid-type").value = "video";
-}
-
-function setPhoto() {
-  document.getElementById("photo-type").value = "photo";
-}
-
-</script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/runVideos.js"> </script>
+    <script src="js/main.js"> </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- These are allegedly needed for bootstrap lmk -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<!-- For youtube! -->
-<script src="https://www.youtube.com/iframe_api"></script>
-  
+
   </body>
 </html>
