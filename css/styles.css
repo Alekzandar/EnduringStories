@@ -1,3 +1,14 @@
+.container-fluid {
+    padding: 0px;
+}
+@media (max-width: 797px) {
+    body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+
+
 .arrow-left{
     background-image:url("../svg/triangle-left.svg");
     background-size: contain;
@@ -11,6 +22,12 @@
 .col-sm{
     transition: all 1s ease;
 }
+
+.col-sm:hover{
+    opacity:.30;
+}
+
+
 
 .col-6{
     transition: all 1s ease;
@@ -40,6 +57,8 @@
 
 #tab1{
     background-image: url("../media/Then_Street_View.jpg");
+    background-size: cover;
+
 }
 
 #tab2{
@@ -47,7 +66,7 @@
 }
 
 #tab3{
-    background-image: url("../media/big_organ.jpg");
+    background-image: url("../media/Ukrainian_Church.jpg");
 }
 
 #tab4{
@@ -71,6 +90,7 @@ background-image:url("../media/Then_Street_View.jpg");
 height:100%;
 width:100%;
 
+
 }
 
 
@@ -92,4 +112,9 @@ width:100%;
     top:45%;
     width:100%;
     height:100%;
+}
+
+#explain{
+
+  background-color: black;
 }
