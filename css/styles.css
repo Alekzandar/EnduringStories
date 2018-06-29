@@ -118,3 +118,22 @@ width:100%;
 
   background-color: black;
 }
+
+
+h1{
+  font-family: 'Bungee Shade';
+
+}
+
+
+
+.col-sm, .col-6{
+  display: table;
+  vertical-align: middle;
+
+}
+
+.content {
+    display:table-cell;
+    vertical-align:middle;
+}
